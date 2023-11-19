@@ -1,5 +1,4 @@
 #include <cassert>
-
 #include "single-linked-list.h"
 
 // Эта функция проверяет работу класса SingleLinkedList
@@ -82,7 +81,8 @@ void Test() {
             if (countdown_ptr) {
                 if (*countdown_ptr == 0) {
                     throw std::bad_alloc();
-                } else {
+                }
+                else {
                     --(*countdown_ptr);
                 }
             }
@@ -103,7 +103,8 @@ void Test() {
                 int copy_counter = max_copy_counter;
                 list.InsertAfter(list.cbegin(), ThrowOnCopy(copy_counter));
                 assert(list.GetSize() == 4u);
-            } catch (const std::bad_alloc&) {
+            }
+            catch (const std::bad_alloc&) {
                 exception_was_thrown = true;
                 assert(list.GetSize() == 3u);
                 break;
