@@ -215,14 +215,10 @@ private:
     template<typename T>
     void Assign(T& elem) {
         SingleLinkedList elem_copy;
-        SingleLinkedList tmp_reverse;
+        Iterator head_it{ &elem_copy.head_ };
 
-        for (auto it = elem.begin(); it != elem.end(); ++it) {
-            tmp_reverse.PushFront(*it);
-        }
-        for (auto it = tmp_reverse.begin(); it != tmp_reverse.end(); ++it) {
-            elem_copy.PushFront(*it);
-        }
+        for (auto it = elem.begin(); it != elem.end(); ++it)
+            head_it = elem_copy.InsertAfter(head_it, *it);
 
         swap(elem_copy);
     }
@@ -824,12 +820,4 @@ void Test4() {
             assert(deletion_counter == 1u);
         }
     }
-}
-
-int main() {
-    Test0();
-    Test1();
-    Test2();
-    Test3();
-    Test4();
 }
