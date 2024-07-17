@@ -44,7 +44,7 @@ This project is licensed under the MIT License.
 Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
 
 ## Example Test Case Breakdown
-```
+```cpp
 // Test case for PopFront function
 SingleLinkedList<int> numbers{3, 14, 15, 92, 6};
 numbers.PopFront();
