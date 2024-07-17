@@ -17,11 +17,11 @@ To compile and run the tests for the Single-Linked List implementation, follow t
    ```sh
    git clone <repository-url>
    cd <repository-directory>
-2. **Compile the program:
-   ```g++ -o test_program test_program.cpp -std=c++17
+2. **Compile the program:**
+   ```g++ -o test_program test_program.cpp -std=c++17```
 
-3. Run the tests:
-   ```./test_program
+3. **Run the tests:**
+   ```./test_program```
 
 ## System Requirements
 - C++ Compiler: GCC 7.3 or later, or any other C++17 compatible compiler.
